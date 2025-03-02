@@ -1,0 +1,15 @@
+[package]
+name = "rust-algorithms"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tonic = "0.12.3"
+prost = "0.13.5"
+tokio = { version = "1.43.0", features = ["full"] }
+serde = { version = "1.0.218", features = ["derive"] }
+serde_json = "1.0.139"
+chrono = "0.4.40"
+
+[build-dependencies]
+tonic-build = "0.12.3"

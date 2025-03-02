@@ -1,0 +1,15 @@
+syntax = "proto3";
+package shift_planner;
+
+service ShiftPlanner {
+    rpc RebalanceShift (ShiftRequest) returns (ShiftResponse);
+    rpc AssignShift (ShiftRequest) returns (ShiftResponse);
+}
+
+message ShiftRequest {
+    string data = 1; // JSON string of input data
+}
+
+message ShiftResponse {
+    string data = 1; // JSON string of output data
+}
