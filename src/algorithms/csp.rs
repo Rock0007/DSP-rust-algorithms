@@ -37,7 +37,7 @@ pub fn rebalance_shift(input: ShiftInput) -> ShiftOutput {
         .unwrap_or(Utc::now());
     let day = shift_start.format("%a").to_string();
 
-    let mut candidates: Vec<(Worker, i32)> = input.workers.iter() // Use iter() to borrow
+    let mut candidates: Vec<(Worker, i32)> = input.workers.iter()
         .filter(|w| {
             w.role == input.role &&
             input.required_skills.iter().all(|skill| w.skills.contains(skill)) &&
